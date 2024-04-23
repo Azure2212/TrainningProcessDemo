@@ -1,0 +1,39 @@
+{
+    "model":{
+        "options": ["resnet18", "resnet34", "resnet50", "resnet101", "resnet150"],
+        "choose": "resnet50"
+    },
+    "optimizer":{
+        "options": ["adam", "sgd", "rmsprop", "adadelta", "adamax"],
+        "choose": "adam"
+    },
+    "batch-size": 64,
+    "image-size": 224,
+    "num-classes": 7,
+    "lr": 0.001,
+    "epochs": 120,
+    "image-chennels": 3,
+    "class-mode": {
+        "options": ["sparse"],
+        "choose": "sparse"
+    },
+    "model-path": "best_model.h5.keras",
+    "author-name": "unknown",
+    "use-wandb": 0,
+    "transform-type": "None",
+    "debug":{
+        "options":[0, 1],
+        "choose":0
+    },
+    "d-steps":2,
+    "wandb-api-key":"",
+    "wandb-project-name":"",
+    "type-resnet":{
+        "options": [0, 1, 2], 
+        "choose": 0
+    },
+    "early-stopping": 15,
+    "lr-decrease": 0.01,
+    "train-folder": "/kaggle/input/rafdb-basic-after-clustering/rafdb_basic_after_clustering/train",
+    "valid-folder": "/kaggle/input/rafdb-basic-after-clustering/rafdb_basic_after_clustering/test"
+}
