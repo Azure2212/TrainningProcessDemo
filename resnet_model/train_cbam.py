@@ -175,7 +175,7 @@ callbacks.append(cb_log)
 callbacks.append(keras.callbacks.EarlyStopping(monitor='val_loss',patience=args.early_stopping))       
           
 # learning rate reduce after 5 epchs without loss decrease
-lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=5, min_lr=0.00001)
+lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=0.8, patience=5, min_lr=0.00001)
 callbacks.append(lr_scheduler)
 
 steps_per_epoch = None
