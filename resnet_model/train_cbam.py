@@ -80,7 +80,7 @@ parser.add_argument('--early-stopping', default= all_inital_argument['early-stop
 parser.add_argument('--lr-decrease', default= all_inital_argument['lr-decrease'], type=int, help='value learning rate decrease after 5 epochs not better')
 args, unknown = parser.parse_known_args()
 configs = vars(args)
-
+for key in args.keys(): print("+ %s: %s"%(key,args[key]))
 
 
 training_datagen = ImageDataGenerator(
